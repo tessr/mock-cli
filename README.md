@@ -11,8 +11,14 @@ go install github.com/tessr/mock-cli/cmd/netchef
 ```
 
 ### Usage 
-Generate a devnet with reasonable defaults and randomly generated name / chain ID:
+Generate the required files for devnet with reasonable defaults and randomly generated name / chain ID:
 
 ```
 $ netchef generate
+```
+
+Deploy the devnet, using the files created through `netchef generate`:
+
+```
+$ netchef deploy
 ```
