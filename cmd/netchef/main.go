@@ -11,8 +11,6 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-const name = "poetic-ocean"
-
 const manifest = `
 name: %s # auto-generated
 status: online
@@ -431,6 +429,7 @@ func main() {
 }
 
 func generate() error {
+	name := randomChainName()
 	chainID := rand.Intn(10000000000)
 	log.Printf("🧑🏻‍🍳  Cooking up inventory, manifest, and state files with default state and randomly generated chain name and ID... ")
 	time.Sleep(time.Second)
@@ -502,7 +501,7 @@ func deploy(chainName string, chainID int) {
 	time.Sleep(2 * time.Second)
 
 	// buen apetito!
-	log.Printf("🧑🏻‍🍳  Your network is now available at %shttps://%s-0.optimism.io%s", cBlue, name, cReset)
+	log.Printf("✅  Your network is now available at %shttps://%s-0.optimism.io%s", cBlue, chainName, cReset)
 	log.Printf("🧑🏻‍🍳  Buen apetito!")
 }
 
