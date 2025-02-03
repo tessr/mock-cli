@@ -9,7 +9,7 @@ import (
 // List of random adjectives and nouns
 var adjectives = []string{
 	"ancient", "bold", "brilliant", "clever", "curious", "daring", "eager", "fearless",
-	"gentle", "lively", "mystic", "noble", "optimistic", "radiant", "swift", "vivid",
+	"gentle", "lively", "mystic", "noble", "radiant", "swift", "vivid",
 }
 
 var nouns = []string{
